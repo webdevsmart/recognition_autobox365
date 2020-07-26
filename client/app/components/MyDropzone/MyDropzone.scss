@@ -1,0 +1,12 @@
+.dropzone {
+  cursor: pointer;
+  display: flex;
+  min-height: 250px;
+  align-items: center;
+  border: 1px solid #3333;
+  justify-content: center;
+  border-radius: 1rem;
+  &:focus {
+    outline: 0;
+  }
+}
