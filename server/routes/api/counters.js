@@ -31,9 +31,8 @@ module.exports = (app) => {
               "Authorization": "Token 528ec607cc73b1439208b687aa0a9dfd343ff66e"
           },
           body: body
-      }).then(res => console.log(res))
+      }).then(res => res.json())
       .then(json => {
-        console.log(json);
         let recogResult = recorgnizeCountriesFromPlateNumber(json.results[0]['plate']);
         res.json({api_result: data, plateNumber: json.results[0]['plate'], countries: recogResult.result, extra: recogResult.extra});
       })
